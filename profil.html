@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXA Portal - Profil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/logo.png" alt="AXA Logo" class="sidebar-logo">
+                <h3>Portal Nasabah</h3>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h4 id="user-name">Demo User</h4>
+                    <p>Nasabah</p>
+                </div>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="profil.html">
+                        <i class="fas fa-user"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="polis.html">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Polis Saya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Pembayaran</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-headset"></i>
+                        <span>Layanan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Profil Saya</h1>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-avatar-small">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <span id="header-user-name">Demo User</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Content -->
+            <div class="content">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profile-name">Demo User</h2>
+                            <p>Nasabah AXA sejak 2020</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-details">
+                        <div class="profile-section">
+                            <h3>Informasi Pribadi</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>Nama Lengkap</label>
+                                    <p id="profile-fullname">Demo User</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Email</label>
+                                    <p id="profile-email">demo.user@example.com</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>No. HP</label>
+                                    <p id="profile-phone">08123456789</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Tanggal Lahir</label>
+                                    <p id="profile-dob">1 Januari 1985</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h3>Alamat</h3>
+                            <div class="info-item">
+                                <label>Alamat Lengkap</label>
+                                <p id="profile-address">Jl. Contoh No. 123, Kelurahan Demo, Kecamatan Test, Jakarta Selatan, DKI Jakarta, 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h3>Informasi Keamanan</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>Kata Sandi</label>
+                                    <p>••••••••</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Pertanyaan Keamanan</label>
+                                    <p>Nama hewan peliharaan pertama Anda?</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-actions">
+                            <button class="btn-edit">
+                                <i class="fas fa-edit"></i>
+                                <span>Edit Profil</span>
+                            </button>
+                            <button class="btn-change-password">
+                                <i class="fas fa-key"></i>
+                                <span>Ubah Password</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
