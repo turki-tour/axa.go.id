@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXA Portal - Detail Polis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/logo.png" alt="AXA Logo" class="sidebar-logo">
+                <h3>Portal Nasabah</h3>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h4 id="user-name">Demo User</h4>
+                    <p>Nasabah</p>
+                </div>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profil.html">
+                        <i class="fas fa-user"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="polis.html">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Polis Saya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Pembayaran</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-headset"></i>
+                        <span>Layanan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Detail Polis</h1>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-avatar-small">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <span id="header-user-name">Demo User</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Policy Detail Content -->
+            <div class="content">
+                <div class="policy-detail-container">
+                    <div class="policy-header">
+                        <div class="policy-icon-large">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="policy-title">
+                            <h2>Asuransi Jiwa Plan A</h2>
+                            <p>Nomor Polis: <strong>POLIS-001</strong></p>
+                        </div>
+                        <div class="policy-status">
+                            <span class="status-active">Aktif</span>
+                        </div>
+                    </div>
+                    
+                    <div class="policy-tabs">
+                        <ul class="tabs-nav">
+                            <li class="active"><a href="#">Informasi Polis</a></li>
+                            <li><a href="#">Manfaat</a></li>
+                            <li><a href="#">Riwayat Pembayaran</a></li>
+                            <li><a href="#">Dokumen</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <div class="policy-section">
+                            <h3>Informasi Polis</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>Nomor Polis</label>
+                                    <p>POLIS-001</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Produk</label>
+                                    <p>Asuransi Jiwa Plan A</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Tanggal Mulai</label>
+                                    <p>1 Januari 2020</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Tanggal Berakhir</label>
+                                    <p>31 Desember 2040</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Status</label>
+                                    <p><span class="status-active">Aktif</span></p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Premi</label>
+                                    <p>Rp 350.000</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Frekuensi Pembayaran</label>
+                                    <p>Bulanan</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Kantor Cabang</label>
+                                    <p>AXA Jakarta Pusat</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-section">
+                            <h3>Rincian Manfaat</h3>
+                            <div class="benefits-list">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="benefit-text">
+                                        <h4>Manfaat Meninggal Dunia</h4>
+                                        <p>Uang pertanggungan sebesar Rp 500.000.000</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="benefit-text">
+                                        <h4>Manfaat Cacat Tetap Total</h4>
+                                        <p>Uang pertanggungan sebesar Rp 500.000.000</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="benefit-text">
+                                        <h4>Manfaat Rawat Inap</h4>
+                                        <p>Santunan rawat inap Rp 500.000 per hari</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="benefit-text">
+                                        <h4>Manfaat Pembedahan</h4>
+                                        <p>Santunan pembedahan hingga Rp 10.000.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-primary">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <span>Bayar Premi</span>
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-file-medical"></i>
+                                <span>Ajukan Klaim</span>
+                            </button>
+                            <button class="btn-secondary">
+                                <i class="fas fa-download"></i>
+                                <span>Unduh Polis</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
