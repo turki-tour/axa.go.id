@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXA Portal - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/logo.png" alt="AXA Logo" class="sidebar-logo">
+                <h3>Portal Nasabah</h3>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <h4 id="user-name">Demo User</h4>
+                    <p>Nasabah</p>
+                </div>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profil.html">
+                        <i class="fas fa-user"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="polis.html">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Polis Saya</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Pembayaran</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-headset"></i>
+                        <span>Layanan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-avatar-small">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <span id="header-user-name">Demo User</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Content -->
+            <div class="content">
+                <!-- Welcome Section -->
+                <div class="welcome-section">
+                    <h2>Selamat Datang, <span id="welcome-user-name">Demo User</span></h2>
+                    <p>Kelola polis asuransi Anda dengan mudah</p>
+                </div>
+                
+                <!-- Policy Cards -->
+                <div class="policy-cards">
+                    <div class="policy-card">
+                        <div class="policy-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="policy-details">
+                            <h3>Asuransi Jiwa Plan A</h3>
+                            <p><strong>No. Polis:</strong> POLIS-001</p>
+                            <p><strong>Status:</strong> <span class="status-active">Aktif</span></p>
+                            <p><strong>Premi:</strong> Rp 350.000</p>
+                        </div>
+                        <div class="policy-action">
+                            <a href="polis.html" class="btn-detail">Detail</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Payment History -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Riwayat Pembayaran</h3>
+                            <a href="#" class="view-all">Lihat Semua</a>
+                        </div>
+                        <div class="card-content">
+                            <table class="payment-table">
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Jenis</th>
+                                        <th>Jumlah</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>15 Okt 2023</td>
+                                        <td>Premi Bulanan</td>
+                                        <td>Rp 350.000</td>
+                                        <td><span class="status-success">Berhasil</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15 Sep 2023</td>
+                                        <td>Premi Bulanan</td>
+                                        <td>Rp 350.000</td>
+                                        <td><span class="status-success">Berhasil</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15 Agu 2023</td>
+                                        <td>Premi Bulanan</td>
+                                        <td>Rp 350.000</td>
+                                        <td><span class="status-success">Berhasil</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Chart -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Grafik Pembayaran</h3>
+                        </div>
+                        <div class="card-content">
+                            <canvas id="premiumChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>Aksi Cepat</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Bayar Premi</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-file-medical"></i>
+                            <span>Klaim</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Unduh Dokumen</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-headset"></i>
+                            <span>Hubungi Kami</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('premiumChart').getContext('2d');
+            const premiumChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt'],
+                    datasets: [{
+                        label: 'Pembayaran Premi',
+                        data: [350000, 350000, 350000, 350000, 350000, 350000, 350000, 350000, 350000, 350000],
+                        backgroundColor: 'rgba(0, 84, 166, 0.2)',
+                        borderColor: 'rgba(0, 84, 166, 1)',
+                        borderWidth: 2,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'Rp ' + value.toLocaleString('id-ID');
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
